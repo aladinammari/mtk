@@ -1,0 +1,95 @@
+/* Style minimaliste et modeste */
+
+body {
+  font-family: Arial, sans-serif;
+  background: url('RES/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-height: 80px;
+}
+
+h1 {
+  margin: 10px 0 5px;
+  font-weight: normal;
+}
+
+.desc {
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+button {
+  background-color: #005580;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 18px;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0077aa;
+}
+
+#zone-pdr div {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+#zone-pdr input {
+  flex: 1;
+}
+
+#resultat {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 12px;
+  color: green;
+}

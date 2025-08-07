@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rapport d’intervention – MTK</title>
+  <link rel="icon" type="image/png" href="RES/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="RES/logo.png" alt="Logo MTK" class="logo" />
+    <h1>Rapport d’intervention – Manufacture des Tabacs de Kairouan</h1>
+  </header>
+
+  <p class="desc">
+    Ce formulaire est destiné aux techniciens de maintenance de l’atelier pilote.<br />
+    Il doit être rempli après chaque intervention pour assurer le suivi et la traçabilité.
+  </p>
+
+  <form id="intervention-form">
+    <label>Date de l’intervention* <input type="date" name="date" required /></label>
+    <label>Heure de début* <input type="time" name="heureDebut" required /></label>
+    <label>Heure de fin* <input type="time" name="heureFin" required /></label>
+
+    <label>Technicien*
+      <select name="technicien" required>
+        <option value="">Sélectionner</option>
+        <option>Fakhr Eddine Frioui</option>
+        <option>Kais Magri</option>
+        <option>Radhouen Ben Belgacem</option>
+        <option>Salah Meskini</option>
+        <option>Salah Chaieb</option>
+        <option>Salah Attallah</option>
+      </select>
+    </label>
+
+    <label>Groupe*
+      <select name="groupe" id="groupe" required>
+        <option value="">Sélectionner</option>
+        <option>Groupe 1</option>
+        <option>Groupe 2</option>
+        <option>Groupe 3</option>
+      </select>
+    </label>
+
+    <label>Ligne d’intervention*
+      <select name="ligne" id="ligne" required></select>
+    </label>
+
+    <label>Sous-machine*
+      <select name="sousMachine" id="sousMachine" required></select>
+    </label>
+
+    <label>Équipement concerné* <input name="equipement" required /></label>
+
+    <label>Type d’intervention*
+      <select name="type" required>
+        <option>Préventive</option>
+        <option>Corrective</option>
+        <option>Inspection / Vérification</option>
+        <option>Autre</option>
+      </select>
+    </label>
+
+    <label>Description de la panne constatée* <textarea name="panne" required></textarea></label>
+    <label>Action réalisée* <textarea name="action" required></textarea></label>
+    <label>Durée de l’intervention (en heures)* <input name="duree" type="number" step="0.1" required /></label>
+
+    <label>Ajouter des pièces de rechange ?
+      <button type="button" id="ajouter-pdr">Ajouter</button>
+    </label>
+    <div id="zone-pdr"></div>
+
+    <label>Observations <textarea name="observation"></textarea></label>
+    <label>Joindre une photo ou un fichier <input type="file" name="fichier" id="fichier" /></label>
+
+    <button type="submit">Envoyer</button>
+    <div id="resultat"></div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
