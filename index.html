@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rapport d’intervention – MTK</title>
   <link rel="icon" type="image/png" href="RES/favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <div class="background-overlay"></div>
@@ -21,7 +24,7 @@
       Il doit être rempli après chaque intervention pour assurer le suivi et la traçabilité.
     </p>
 
-    <form id="intervention-form">
+    <form class="form-container" id="intervention-form">
       <label>Date de l’intervention*<input type="date" name="date" required /></label>
       <label>Heure de début*<input type="time" name="heureDebut" required /></label>
       <label>Heure de fin*<input type="time" name="heureFin" required /></label>
@@ -65,9 +68,13 @@
           <option>Autre</option>
         </select>
       </label>
-
-      <label>Description de la panne constatée*<textarea name="panne" required></textarea></label>
-      <label>Action réalisée*<textarea name="action" required></textarea></label>
+      
+      <label>Description de la panne constatée* 
+        <textarea name="panne" required></textarea>
+      </label>
+      <label>Action réalisée* 
+        <textarea name="action" required></textarea>
+      </label>
       <label>Durée de l’intervention (en heures)*<input type="number" step="0.1" name="duree" required /></label>
 
       <label>
@@ -76,7 +83,9 @@
       </label>
       <div id="zone-pdr"></div>
 
-      <label>Observations<textarea name="observation"></textarea></label>
+      <label>Observations
+        <textarea name="observation"></textarea>
+      </label>
 
       <label>Joindre une photo ou un fichier
         <input type="file" name="fichier" id="fichier" />
