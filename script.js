@@ -69,17 +69,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(form);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbxn-4VO8woPK-QO7HkbotjkjWkRcSkMiD2OXDEXqBwGZKd7_QsZUa8Y2uVqS7lj5_1FIw/exec",
+      "https://script.google.com/macros/s/AKfycby-zt45GqXiGo9_6l7R0maNhdqQ4UBQBxwLbPV6p-YArYditAyxQalZeK84MRi-MC9vUw/exec",
       {
         method: "POST",
         body: formData,
       }
     )
-      .then((res) => res.text())
-      .then((txt) => {
-        resultat.textContent = txt || "Formulaire envoyé avec succès.";
-        form.reset();
-        zonePdr.innerHTML = "";
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "success") {
+          resultat.textContent = data.message || "Formulaire envoyé avec succès.";
+          form.reset();
+          zonePdr.innerHTML = "";
+        } else {
+          resultat.textContent = "Erreur : " + (data.message || "Erreur inconnue");
+        }
       })
       .catch((err) => {
         resultat.textContent = "Erreur lors de l'envoi : " + err.message;

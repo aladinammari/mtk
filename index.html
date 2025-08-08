@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rapport d’intervention – MTK</title>
   <link rel="icon" type="image/png" href="RES/favicon.png" />
   <link rel="stylesheet" href="style.css" />
@@ -24,7 +24,7 @@
       Il doit être rempli après chaque intervention pour assurer le suivi et la traçabilité.
     </p>
 
-    <form class="form-container" id="intervention-form">
+    <form id="intervention-form" enctype="multipart/form-data" novalidate>
       <label>Date de l’intervention*<input type="date" name="date" required /></label>
       <label>Heure de début*<input type="time" name="heureDebut" required /></label>
       <label>Heure de fin*<input type="time" name="heureFin" required /></label>
@@ -68,13 +68,15 @@
           <option>Autre</option>
         </select>
       </label>
-      
+
       <label>Description de la panne constatée* 
         <textarea name="panne" required></textarea>
       </label>
+
       <label>Action réalisée* 
         <textarea name="action" required></textarea>
       </label>
+
       <label>Durée de l’intervention (en heures)*<input type="number" step="0.1" name="duree" required /></label>
 
       <label>
@@ -98,4 +100,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
