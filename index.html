@@ -24,77 +24,73 @@
       Il doit être rempli après chaque intervention pour assurer le suivi et la traçabilité.
     </p>
 
-    <form id="intervention-form" enctype="multipart/form-data" novalidate>
-      <label>Date de l’intervention*<input type="date" name="date" required /></label>
-      <label>Heure de début*<input type="time" name="heureDebut" required /></label>
-      <label>Heure de fin*<input type="time" name="heureFin" required /></label>
+    <form id="intervention-form" enctype="multipart/form-data" >
+      <label for="date">Date de l’intervention*</label>
+      <input type="date" name="date" id="date" required />
 
-      <label>Technicien*
-        <select name="technicien" required>
-          <option value="">Sélectionner</option>
-          <option>Fakhr Eddine Frioui</option>
-          <option>Kais Magri</option>
-          <option>Radhouen Ben Belgacem</option>
-          <option>Salah Meskini</option>
-          <option>Salah Chaieb</option>
-          <option>Salah Attallah</option>
-        </select>
-      </label>
+      <label for="heureDebut">Heure de début*</label>
+      <input type="time" name="heureDebut" id="heureDebut" required />
 
-      <label>Groupe*
-        <select name="groupe" id="groupe" required>
-          <option value="">Sélectionner</option>
-          <option>Groupe 1</option>
-          <option>Groupe 2</option>
-          <option>Groupe 3</option>
-        </select>
-      </label>
+      <label for="heureFin">Heure de fin*</label>
+      <input type="time" name="heureFin" id="heureFin" required />
 
-      <label>Ligne d’intervention*
-        <select name="ligne" id="ligne" required></select>
-      </label>
+      <label for="technicien">Technicien*</label>
+      <select name="technicien" id="technicien" required>
+        <option value="">Sélectionner</option>
+        <option>Fakhr Eddine Frioui</option>
+        <option>Kais Magri</option>
+        <option>Radhouen Ben Belgacem</option>
+        <option>Salah Meskini</option>
+        <option>Salah Chaieb</option>
+        <option>Salah Attallah</option>
+      </select>
 
-      <label>Sous-machine*
-        <select name="sousMachine" id="sousMachine" required></select>
-      </label>
+      <label for="groupe">Groupe*</label>
+      <select name="groupe" id="groupe" required>
+        <option value="">Sélectionner</option>
+        <option>Groupe 1</option>
+        <option>Groupe 2</option>
+        <option>Groupe 3</option>
+      </select>
 
-      <label>Équipement concerné*<input type="text" name="equipement" required /></label>
+      <label for="ligne">Ligne d’intervention*</label>
+      <select name="ligne" id="ligne" required></select>
 
-      <label>Type d’intervention*
-        <select name="type" required>
-          <option>Préventive</option>
-          <option>Corrective</option>
-          <option>Inspection / Vérification</option>
-          <option>Autre</option>
-        </select>
-      </label>
+      <label for="sousMachine">Sous-machine*</label>
+      <select name="sousMachine" id="sousMachine" required></select>
 
-      <label>Description de la panne constatée* 
-        <textarea name="panne" required></textarea>
-      </label>
+      <label for="equipement">Équipement concerné*</label>
+      <input type="text" name="equipement" id="equipement" required />
 
-      <label>Action réalisée* 
-        <textarea name="action" required></textarea>
-      </label>
+      <label for="type">Type d’intervention*</label>
+      <select name="type" id="type" required>
+        <option>Préventive</option>
+        <option>Corrective</option>
+        <option>Inspection / Vérification</option>
+        <option>Autre</option>
+      </select>
 
-      <label>Durée de l’intervention (en heures)*<input type="number" step="0.1" name="duree" required /></label>
+      <label for="panne">Description de la panne constatée*</label>
+      <textarea name="panne" id="panne" required></textarea>
 
-      <label>
-        Pièces de rechange
-        <button type="button" id="btnAjouterPdr" aria-label="Ajouter pièce">Ajouter</button>
-      </label>
+      <label for="action">Action réalisée*</label>
+      <textarea name="action" id="action" required></textarea>
+
+      <label for="duree">Durée de l’intervention (en heures)*</label>
+      <input type="number" step="0.1" name="duree" id="duree" required />
+
+      <label>Pièces de rechange</label>
+      <button type="button" id="btnAjouterPdr" aria-label="Ajouter pièce">Ajouter</button>
       <div id="zone-pdr"></div>
 
-      <label>Observations
-        <textarea name="observation"></textarea>
-      </label>
+      <label for="observation">Observations</label>
+      <textarea name="observation" id="observation"></textarea>
 
-      <label>Joindre une photo ou un fichier
-        <input type="file" name="fichier" id="fichier" />
-      </label>
+      <label for="fichier">Joindre une photo ou un fichier</label>
+      <input type="file" name="fichier" id="fichier" />
 
       <button type="submit">Envoyer</button>
-      <div id="resultat" role="alert" aria-live="polite"></div>
+      <div id="resultat" role="alert" aria-live="assertive"></div>
     </form>
   </div>
 

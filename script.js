@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const sousMachines = {
     "Protos 80E": ["VE", "SE", "MAX", "CHF", "Magomat"],
-    "Protos 90E": ["VE", "SE", "MAX", "CHF"], // pas Magomat pour Groupe 1
+    "Protos 90E": ["VE", "SE", "MAX", "CHF"],
     "Foke_Groupe 1": ["317", "350", "401", "409", "459"],
     "Foke_Groupe 2": ["317", "401", "407", "459"],
     "GD": ["X3", "C600", "CV", "CT", "Flexlink"],
@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     zonePdr.appendChild(div);
 
-    // Supprimer ligne PDR au clic sur ✕
     div.querySelector(".btn-suppr").addEventListener("click", () => {
       div.remove();
     });
@@ -69,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(form);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycby-zt45GqXiGo9_6l7R0maNhdqQ4UBQBxwLbPV6p-YArYditAyxQalZeK84MRi-MC9vUw/exec",
+      "https://script.google.com/macros/s/AKfycbxlwFplbmvADIYlzGEDtd3axsdZADk9UaUImOUU46u8oCxRPaWyReJUtp3af57o8DHn-g/exec",
       {
         method: "POST",
         body: formData,
